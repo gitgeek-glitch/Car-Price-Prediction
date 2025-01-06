@@ -37,11 +37,6 @@ const dockItems = [
     icon: <TrendingUp className="h-6 w-6" />,
     href: "/performance",
   },
-  {
-    title: "Dataset Info",
-    icon: <Table className="h-6 w-6" />,
-    href: "/dataset",
-  },
 ];
 
 export default function ModelsPage() {

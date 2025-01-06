@@ -21,11 +21,6 @@ export default function Home() {
       icon: <TrendingUp className="h-6 w-6" />,
       href: "/performance",
     },
-    {
-      title: "Dataset Info",
-      icon: <Table className="h-6 w-6" />,
-      href: "/dataset",
-    },
   ];
 
   return (
@@ -38,7 +33,7 @@ export default function Home() {
       <header className="px-4 lg:px-6 h-14 flex items-center border-b border-border/40 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <Link className="flex items-center justify-center" href="/">
           <Car className="h-6 w-6" />
-          <span className="ml-2 text-lg font-semibold">CarPrice AI</span>
+          <span className="ml-2 text-lg font-semibold">CarPricer</span>
         </Link>
       </header>
       <main className="flex-1">
@@ -48,10 +43,10 @@ export default function Home() {
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
                   Predict Car Prices with
-                  <span className="text-primary ml-2">AI Precision</span>
+                  <span className="text-primary ml-2">Precision</span>
                 </h1>
                 <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                  Leverage the power of 8 advanced machine learning models to get accurate car price predictions. Make
+                  Leverage the power of 5 simple and 3 ensemble machine learning models to get accurate car price predictions. Make
                   informed decisions with data-driven insights.
                 </p>
               </div>
@@ -79,7 +74,7 @@ export default function Home() {
                   <div className="inline-block rounded-lg bg-primary/10 p-3">
                     <Sparkles className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="text-2xl font-bold">8 Advanced Models</h3>
+                  <h3 className="text-2xl font-bold">8 Different Models</h3>
                   <p className="text-muted-foreground">
                     Choose from various ML models including Linear Regression, Random Forest, and XGBoost
                   </p>
