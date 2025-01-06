@@ -12,6 +12,31 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Button } from "@/components/ui/button"
 import { models } from "@/lib/utils"
 import { Loader2 } from 'lucide-react'
+import { Car, ArrowRight, Sparkles, HomeIcon, Code, Table, TrendingUp } from "lucide-react";
+import { FloatingDock } from "@/components/ui/floating-dock";
+
+  const dockItems = [
+    {
+      title: "Home",
+      icon: <HomeIcon className="h-6 w-6" />,
+      href: "/",
+    },
+    {
+      title: "Code",
+      icon: <Code className="h-6 w-6" />,
+      href: "/code",
+    },
+    {
+      title: "Performance Measure",
+      icon: <TrendingUp className="h-6 w-6" />,
+      href: "/performance",
+    },
+    {
+      title: "Dataset Info",
+      icon: <Table className="h-6 w-6" />,
+      href: "/dataset",
+    },
+  ];
 
 const formSchema = z.object({
   model: z.string(),
@@ -99,6 +124,9 @@ export default function PredictPage() {
 
   return (
     <div className="container mx-auto py-12">
+      <div className="absolute top-5 right-5 transform translate-x-0 z-50">
+                          <FloatingDock items={dockItems} />
+                  </div>
       <Card className="max-w-2xl mx-auto border-primary/20">
         <CardHeader>
           <CardTitle className="flex items-center space-x-2">

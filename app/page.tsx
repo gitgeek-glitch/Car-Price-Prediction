@@ -1,10 +1,40 @@
-import Link from "next/link"
-import { Car, ArrowRight, Sparkles } from 'lucide-react'
-import { Button } from "@/components/ui/button"
+import Link from "next/link";
+import { Car, ArrowRight, Sparkles, HomeIcon, Code, Table, TrendingUp } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { FloatingDock } from "@/components/ui/floating-dock";
 
 export default function Home() {
+  // Define the `items` to pass to FloatingDock component
+  const dockItems = [
+    {
+      title: "Home",
+      icon: <HomeIcon className="h-6 w-6" />,
+      href: "/",
+    },
+    {
+      title: "Code",
+      icon: <Code className="h-6 w-6" />,
+      href: "/code",
+    },
+    {
+      title: "Performance Measure",
+      icon: <TrendingUp className="h-6 w-6" />,
+      href: "/performance",
+    },
+    {
+      title: "Dataset Info",
+      icon: <Table className="h-6 w-6" />,
+      href: "/dataset",
+    },
+  ];
+
   return (
     <div className="flex min-h-screen flex-col">
+      {/* Centered Navbar */}
+      <div className="absolute top-5 right-5 transform translate-x-0 z-50">
+        <FloatingDock items={dockItems} />
+      </div>
+
       <header className="px-4 lg:px-6 h-14 flex items-center border-b border-border/40 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <Link className="flex items-center justify-center" href="/">
           <Car className="h-6 w-6" />
@@ -18,12 +48,11 @@ export default function Home() {
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
                   Predict Car Prices with
-                  <span className="text-primary ml-2">
-                    AI Precision
-                  </span>
+                  <span className="text-primary ml-2">AI Precision</span>
                 </h1>
                 <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                  Leverage the power of 8 advanced machine learning models to get accurate car price predictions. Make informed decisions with data-driven insights.
+                  Leverage the power of 8 advanced machine learning models to get accurate car price predictions. Make
+                  informed decisions with data-driven insights.
                 </p>
               </div>
               <div className="space-x-4">
@@ -83,5 +112,5 @@ export default function Home() {
         </section>
       </main>
     </div>
-  )
+  );
 }

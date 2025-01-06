@@ -1,10 +1,12 @@
-import { type ClassValue, clsx } from "clsx"
-import { twMerge } from "tailwind-merge"
+import { ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 
+// Merged utility function to handle class names
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
+  return twMerge(clsx(inputs));
 }
 
+// Original models array remains the same
 export const models = [
   {
     id: "linear-regression",
@@ -86,4 +88,4 @@ export const models = [
     },
     icon: "Zap"
   }
-]
+];
