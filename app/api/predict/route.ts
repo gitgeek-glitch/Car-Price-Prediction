@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 // Update the Flask API URL to the deployed backend URL
-const FLASK_API_URL = "https://car-price-prediction-9fiz.onrender.com/predict";
+const FLASK_API_URL = 'http://localhost:5000/predict'; // Flask API URL
 
 export async function POST(request: Request) {
   try {
